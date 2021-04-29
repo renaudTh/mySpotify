@@ -1,0 +1,161 @@
+*{
+	margin : 0;
+	padding : 0;
+}	
+h1{
+	font-size:40pt;
+}
+body{
+	background-color: #181818;
+	font-family: Helvetica,Arial,sans-serif;
+	color: white;
+	font-size: 10pt;
+}
+a:visited{
+	color : white;
+}
+#albums-list{
+	display: flex;
+	flex-direction: row;	
+	flex-wrap: wrap;
+}
+.cover-mosaic{
+	width: 200px;
+	height:200px;
+}
+.album-prez{
+	margin: 5px;
+	background-color: black;
+	padding: 10px;
+	color: white;
+	border-radius: 10px;
+	max-width:200px;
+	overflow:hidden;
+}
+.album-prez:hover{
+	
+	cursor: pointer;
+	background-image: radial-gradient(circle, white, black);
+}
+.artists-prez li:hover{
+	background-color : grey;
+}
+.artists-prez li{
+	display: block;
+	width:150px;
+	height: 30px;
+	background-color: black;
+	margin-top:5px;
+	text-align: center;
+	padding-top:auto;
+	border-radius: 5px;
+}
+.date{
+	color: #cccccc;
+}
+.header-album{
+	display: flex;
+	background-image:linear-gradient(#414141, #181818);
+}
+.infos-album{
+	margin-left: 5px;
+	width:100%;
+	padding:10px;
+}
+.infos-album p{
+	margin-top: 5px;
+}
+.cover{
+	width:250px;
+}
+#content{
+
+	margin-left:auto;
+	margin-right: auto;
+	width: 66%;
+	max-width: 1440px;
+}
+
+.track-list{
+	display:flex;
+	flex-direction: column;
+}
+.track{
+	display : flex;
+	height: 40px;
+	line-height: 40px;
+	background-color:#181818;
+	border-bottom: 1px solid #242424;
+	cursor : default;;
+	margin:auto;
+	width:100%;
+	overflow:hidden;
+}
+.track p{
+	margin-top: auto;
+}
+.track-number{
+	width: 5%;
+	text-align: center;
+	
+}
+.track-title{
+	width: 85%;
+}
+.track-duration{
+	width:10%;
+}
+.track:hover{
+	background-color: #414141;
+}
+#searchButton{
+
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: green; /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 8px; /* Some padding */
+	margin: 8px;
+	border-radius: 20px; /* Rounded corners */
+	font-size: 18px; /* Increase font size */
+	width: 15%;
+	height: 40px;
+}
+#searchBar{
+	width: 80%;
+	height: 40px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+#search-results{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.search-results-item{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin:10px;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	overflow:hidden;
+}
+.search-results-item:hover{
+	cursor:pointer;
+	background-color:#414141;
+}
+.image-artist{
+	width: 70%;
+	height: 70%;
+	border-radius:50%;
+	display: block;
+	margin: auto;
+}	
+input:focus { outline: 0; }

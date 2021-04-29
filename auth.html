@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>API Spotify</title>
+  </head>
+  <body>
+    <script src='modules/spotifyApi.js'></script>
+    <script type="text/javascript">
+        queryString = window.location.search;
+        if ( queryString.length > 0 ){
+            const urlParams = new URLSearchParams(queryString);
+            var authCode = urlParams.get('code');
+            
+            getTokens(authCode).then(function(data){
+                sessionStorage.setItem('access_token',data.access_token);
+                sessionStorage.setItem('refresh_token',data.refresh_token);
+            }).then( () => {window.location.href = './';});
+        }
+    </script>
+</html>
+
+
